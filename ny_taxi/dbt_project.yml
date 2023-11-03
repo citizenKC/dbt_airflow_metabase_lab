@@ -1,0 +1,27 @@
+name: 'ny_taxi'
+version: '1.0.0'
+config-version: 2
+profile: 'ny_taxi'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+
+clean-targets:   
+  - "target"
+  - "dbt_packages"
+
+models:
+  ny_taxi:
+    staging:
+      +materialized: table
+      +schema: stage
+    marts:
+      +materialized: view
+      +schema: marts
+
+seeds:
+  +schema: marts
+
+# vars:
+#   surrogate_key_treat_nulls_as_empty_strings: true

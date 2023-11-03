@@ -1,0 +1,9 @@
+pandas
+pyarrow
+sqlalchemy
+psycopg2-binary
+apache-airflow-providers-postgres
+python-decouple
+dbt-postgres
+airflow-dbt
+python-dotenv==1.0.0

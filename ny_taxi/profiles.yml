@@ -1,0 +1,15 @@
+ny_taxi:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: de_postgres
+      user: admin
+      password: admin
+      port: 5431
+      dbname: ny_taxi
+      schema: public
+      threads: 1
+      connect_timeout: 10
+      
+  
